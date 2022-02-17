@@ -1,7 +1,7 @@
 h1 {
-    font-family: 'Comic Sans MS', cursive;
+    font-family: 'Papyrus', fantasy;
     font-size: 100px;
-    animation: rainbow-glow 5s infinite, rainbow-pastel 5s infinite;
+    animation: rainbow-glow 6s infinite, rainbow-pastel 6s infinite;
     display: block;
     flex: 0 1 auto;
     text-align: center;

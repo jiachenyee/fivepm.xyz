@@ -1,0 +1,23 @@
+h1 {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 60px;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, #ffff00, orange, red);
+}
+
+@keyframes rainbow {
+    0% {
+        color: red;
+    }
+    15% {
+
+    }
+    30% {
+        color: yellow;
+    }
+    45% {
+
+    }
+    % {
+        color: 
+    }
+}

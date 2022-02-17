@@ -1,7 +1,10 @@
 var fivePMText = document.getElementById("5pm");
 
-setTimeout(function () {
-	var date = new Date()
+reload();
+setTimeout(reload, 30000);
 
-	fivePMText.innerText = date.getHours() == 17 ? "yes" : "no"
-}, 30000)
+function reload() {
+	var date = new Date();
+
+	fivePMText.innerText = date.getHours() == 17 ? "yes" : "no";
+}

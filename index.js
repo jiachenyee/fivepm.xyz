@@ -1,4 +1,5 @@
 var fivePMText = document.getElementById("5pm");
+var arBadge = document.getElementById("arbadge");
 var now = new Date();
 var fivePM = new Date();
 
@@ -18,4 +19,5 @@ function reload() {
 	var date = new Date();
 
 	fivePMText.innerText = date.getHours() == 17 ? "yes" : "no";
+    arBadge.href = date.getHours() == 17 ? "assets/yes.reality" : "assets/no.reality";
 }

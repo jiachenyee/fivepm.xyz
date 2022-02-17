@@ -1,23 +1,76 @@
 h1 {
     font-family: 'Comic Sans MS', cursive;
-    font-size: 60px;
-    background-image: linear-gradient(to left, violet, indigo, blue, green, #ffff00, orange, red);
+    font-size: 100px;
+    animation: rainbow-glow 5s infinite, rainbow-pastel 5s infinite;
+    display: block;
+    flex: 0 1 auto;
+    text-align: center;
 }
 
-@keyframes rainbow {
+body {
+    background-color: black;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes rainbow-glow {
     0% {
-        color: red;
+        text-shadow: 0 0 40px red;
     }
     15% {
-
+        text-shadow: 0 0 40px orange;
     }
     30% {
-        color: yellow;
+        text-shadow: 0 0 40px yellow;
     }
     45% {
-
+        text-shadow: 0 0 40px lime;
     }
-    % {
-        color: 
+    60% {
+        text-shadow: 0 0 40px blue;
+    }
+    75% {
+        text-shadow: 0 0 40px rgb(149, 0, 255);
+    }
+    90% {
+        text-shadow: 0 0 40px rgb(255, 0, 255);
+    }
+    100% {
+        text-shadow: 0 0 40px red;
+    }
+}
+
+@keyframes rainbow-pastel {
+    0% {
+        color: rgb(255, 136, 136);
+    }
+    15% {
+        color: rgb(255, 208, 121);
+    }
+    30% {
+        color: rgb(255, 255, 117);
+    }
+    45% {
+        color: rgb(116, 255, 116);
+    }
+    60% {
+        color: rgb(97, 97, 255);
+    }
+    75% {
+        color: rgb(198, 117, 255);
+    }
+    90% {
+        color: rgb(255, 123, 255);
+    }
+    100% {
+        color: rgb(255, 137, 137);
     }
 }

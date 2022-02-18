@@ -3,23 +3,26 @@ var arBadge = document.getElementById("arbadge");
 var now = new Date();
 var fivePM = new Date();
 
-if (now.getHours() < 17) {
-    fivePM.setHours(17, 0, 0, 0);
-} else {
-    fivePM.setHours(17, 0, 0, 0);
-    fivePM.setDate(now.getDate() + 1);
-}
-
-var timeToFivePM = fivePM - now;
-
 reload();
-setTimeout(reload, timeToFivePM);
 
 function reload() {
-	var date = new Date();
+	now = new Date();
 
-	fivePMText.innerText = date.getHours() == 17 ? "yes" : "no";
-    arBadge.href = date.getHours() == 17 ? "assets/yes.reality" : "assets/no.reality";
+    if (now.getHours() < 17) {
+        fivePM.setHours(17, 0, 0, 0);
+    } else {
+        fivePM.setHours(17, 0, 0, 0);
+        fivePM.setDate(now.getDate() + 1);
+    }
+
+    var timeToFivePM = fivePM - now;
+    var timeToSixPM = timeToFivePM + (60 * 60 * 1000)
+
+    setTimeout(reload, timeToFivePM); //updates at 5pm
+    setTimeout(reload, timeToSixPM); //updates at 6pm
+
+	fivePMText.innerText = now.getHours() == 17 ? "yes" : "no";
+    arBadge.href = now.getHours() == 17 ? "assets/yes.reality" : "assets/no.reality";
 }
 
 //#-hidden-code

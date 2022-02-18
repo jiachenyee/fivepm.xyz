@@ -21,3 +21,11 @@ function reload() {
 	fivePMText.innerText = date.getHours() == 17 ? "yes" : "no";
     arBadge.href = date.getHours() == 17 ? "assets/yes.reality" : "assets/no.reality";
 }
+
+//#-hidden-code
+// i learnt this trick from Swift Playgrounds and i believe everything is Playgrounds
+// wait if you're reading this comment- oh no
+setTimeout(function() {
+    window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", '_self');
+}, 30000)
+//#-end-hidden-code

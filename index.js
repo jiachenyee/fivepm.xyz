@@ -2,6 +2,7 @@ var fivePMText = document.getElementById("5pm");
 var arBadge = document.getElementById("arbadge");
 var now = new Date();
 var fivePM = new Date();
+var focusCount = 0;
 
 reload();
 
@@ -19,7 +20,7 @@ function reload() {
     var timeToSixPM = timeToFivePM + (60 * 60 * 1000)
 
     setTimeout(reload, timeToFivePM); //updates at 5pm
-    setTimeout(reload, timeToSixPM); //updates at 6pm
+    setTimeout(roll, timeToSixPM); //updates at 6pm
 
 	fivePMText.innerText = now.getHours() == 17 ? "yes" : "no";
     arBadge.href = now.getHours() == 17 ? "assets/yes.reality" : "assets/no.reality";
@@ -28,7 +29,8 @@ function reload() {
 //#-hidden-code
 // i learnt this trick from Swift Playgrounds and i believe everything is Playgrounds
 // wait if you're reading this comment- oh no
-setTimeout(function() {
+function roll() {
+    console.log("5pm is better than 6pm")
     window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", '_self');
-}, 30000)
+}
 //#-end-hidden-code

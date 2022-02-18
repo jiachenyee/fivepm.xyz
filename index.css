@@ -1,5 +1,5 @@
 h1 {
-    font-family: 'Comic Sans MS', cursive;
+    font-family: 'Comic Sans MS', 'Papyrus', cursive;
     font-size: 100px;
     animation: rainbow-glow 5s infinite, rainbow-pastel 5s infinite;
     display: block;

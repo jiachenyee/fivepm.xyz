@@ -17,7 +17,9 @@ function reload() {
     }
 
     var timeToFivePM = fivePM - now;
-    var timeToSixPM = timeToFivePM + (60 * 60 * 1000)
+    var timeToSixPM = new Date();
+	
+	timeToSixPM.setHours(18, 0, 0, 0);
 
     setTimeout(reload, timeToFivePM); //updates at 5pm
     setTimeout(roll, timeToSixPM); //updates at 6pm
